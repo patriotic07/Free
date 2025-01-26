@@ -43,9 +43,9 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
-API_ID    = os.environ.get("API_ID", "29937683")
-API_HASH  = os.environ.get("API_HASH", "5f6d4ca9ffadd037db94446dc7c0d6fa")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "6157905243:AAEPyU95R9o3Nu7fKVOtUyvY-3zoUKMJhoI") 
+API_ID    = os.environ.get("API_ID", "25989404")
+API_HASH  = os.environ.get("API_HASH", "e7c5f3966d9ffc6222e4b06e15b84b4a")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
 
 # Define aiohttp routes
 routes = web.RouteTableDef()
@@ -91,11 +91,11 @@ import random
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Thor_700"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+j1u5Ze6BlSE0ODM1"),
+            InlineKeyboardButton(text="📞 Contact", url="https://t.me/tgberlin07"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/tgberlin07"),
         ],
         [
-            InlineKeyboardButton(text="🪄 Updates Channel", url="https://t.me/+Fag4jwAKNZRiNzk1"),
+            InlineKeyboardButton(text="🪄 Updates Channel", url="https://t.me/tgberlin07"),
         ],
     ]
 )
@@ -104,11 +104,11 @@ keyboard = InlineKeyboardMarkup(
 Busy = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Thor_700"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+j1u5Ze6BlSE0ODM1"),
+            InlineKeyboardButton(text="📞 Contact", url="https://t.me/tgberlin07"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/tgberlin07"),
         ],
         [
-            InlineKeyboardButton(text="🪄 Updates Channel", url="https://t.me/+Fag4jwAKNZRiNzk1"),
+            InlineKeyboardButton(text="🪄 Updates Channel", url="https://t.me/tgberlin07"),
         ],
     ]
 )
@@ -224,7 +224,7 @@ async def text_to_txt(client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@tgberlin07** for subscription details."
         )
         return
 
@@ -300,7 +300,7 @@ async def edit_txt(client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@tgberlin07** for subscription details."
         )
         return
 
@@ -488,7 +488,7 @@ async def ytplaylist_to_txt(client: Client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@tgberlin07** for subscription details."
         )
         return
 
@@ -600,7 +600,7 @@ async def ytplaylist_to_txt(client: Client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@tgberlin07** for subscription details."
         )
         return
 
@@ -643,7 +643,7 @@ async def start_command(bot: Client, message: Message):
         "➠ **Can Extract Videos & PDFs From Your Text File and Upload to Telegram!**\n"
         "➠ **For Guide Use Command /guide 📖**\n\n"
         "➠ **Use /upload Command to Download From TXT File** 📄\n\n"
-        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @Thor_700"
+        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @tgberlin07"
     )
 
     # Send the image with caption and buttons
@@ -659,7 +659,7 @@ async def start_command(bot: Client, message: Message):
 
 # Retrieve the cookies file path from the environment variable or set the default path
 COOKIES_FILE_PATH = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
-ADMIN_ID = 6433733086  # Admin ID for restricting the command
+ADMIN_ID = 7436849552 # Admin ID for restricting the command
 
 @bot.on_message(filters.command("cookies") & filters.private)
 async def cookies_handler(client: Client, m: Message):
@@ -707,7 +707,7 @@ async def cookies_handler(client: Client, m: Message):
 
 # Retrieve the cookies file path from the environment variable or set the default path
 INSTAGRAM_COOKIES_PATH = os.getenv("INSTAGRAM_COOKIES_PATH", "instagram_cookies.txt")
-ADMIN_ID = 6433733086  # Admin ID for restricting the command
+ADMIN_ID = 7436849552  # Admin ID for restricting the command
 
 @bot.on_message(filters.command("instacookies") & filters.private)
 async def instacookies_handler(client: Client, m: Message):
@@ -757,7 +757,7 @@ SUBSCRIPTION_FILE = "subscription_data.txt"
 CHANNELS_FILE = "channels_data.json"
 
 # Admin ID
-ADMIN_ID = 5441890893
+ADMIN_ID = 7436849552
 
 # Function to read subscription data
 def read_subscription_data():
@@ -869,7 +869,7 @@ async def remove_user(client, message: Message):
     except ValueError:
         await message.reply_text("Invalid command format. Use: /removeuser <user_id>")
 
-YOUR_ADMIN_ID = 5441890893
+YOUR_ADMIN_ID = 7436849552
 
 # Helper function to check admin privilege
 def is_admin(user_id):
@@ -976,7 +976,7 @@ async def id_command(client, message: Message):
         f"`/add_channel {chat_id}`"
     )
 
-YOUR_ADMIN_ID = 5441890893
+YOUR_ADMIN_ID = 7436849552
 
 # Helper function to check admin privilege
 def is_admin(user_id):
@@ -1027,7 +1027,7 @@ async def stop_handler(client, message: Message):
             await message.reply_text("🚫 You are not a premium user. Subscribe to unlock all features! ✨")
             return
 
-    await message.reply_text("♦️ 𝐒𝐭𝐨𝐩𝐩𝐞𝐝 ♦️" , True)
+    await message.reply_text("⚠️ STOPPED ⚠️" , True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 @bot.on_message(filters.command("upload"))
@@ -1089,11 +1089,11 @@ async def upload_handler(client: Client, m: Message):
     await input0.delete(True)               
 
     # This is where you would set up your bot and connect the handle_command function      
-    await editable.edit("**Enter Batch Name or send d for grabing from text filename.**")
+    await editable.edit("**Enter Batch Name or send 1 for grabing from text filename.**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
-    if raw_text0 == 'd':
+    if raw_text0 == '1':
         b_name = file_name
     else:
         b_name = raw_text0
@@ -1122,7 +1122,7 @@ async def upload_handler(client: Client, m: Message):
     
     
 
-    await editable.edit("**Enter Your Name or send `de` for use default**")
+    await editable.edit("**Enter Your Name or send `1` for use default**")
 
     # Listen for the user's response
     input3: Message = await bot.listen(editable.chat.id)
@@ -1135,8 +1135,8 @@ async def upload_handler(client: Client, m: Message):
 
     # Default credit message
     credit = "️ ⁪⁬⁮⁮⁮"
-    if raw_text3 == 'de':
-        CR = 'ITS๛Pυɳҽҽƚ亗'
+    if raw_text3 == '1':
+        CR = 'ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭♚'
     elif raw_text3:
         CR = raw_text3
     else:
@@ -1252,9 +1252,9 @@ async def upload_handler(client: Client, m: Message):
         
                 
             try:                
-                cc = f'**[ 🎬 ] Lᴇᴄ ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} {res} 🐲.mkv\n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
-                cc1 = f'**[ 📚 ] Pᴅғ ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} 🐲.pdf \n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
-                cc2 = f'**[ 📷 ] IMAGE ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} 🐲.png \n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
+                cc = f'**[ 🎬 ] Lᴇᴄ ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} {res}ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭ ♚🐲.mkv\n\n<pre><code>🔖 Batch Name: {b_name}ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭ ♚</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
+                cc1 = f'**[ 📚 ] Pᴅғ ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭ ♚🐲.pdf \n\n<pre><code>🔖 Batch Name: {b_name}ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭ ♚</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
+                cc2 = f'**[ 📷 ] IMAGE ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1}ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭ ♚ 🐲.png \n\n<pre><code>🔖 Batch Name: {b_name}ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭ ♚</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
                                                  
                 if "drive" in url:
                     try:
@@ -1348,7 +1348,7 @@ async def upload_handler(client: Client, m: Message):
                     Show = f"""❊ ♻️..𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠..♻️ ❊ »\n\n📄 **Title:** `{name}`\n🔥 **Quality:** {raw_text2}\n"""
                 
                     # Enhanced prog message
-                    prog = await m.reply_text(f"**♻️..Downloading Video..♻️**\n\n📄 **Title:** `{name}`\n🔥 **Quality:** {raw_text2}\n\n⚡ **Bσƚ Oɯɳҽɾ➵ITS๛Pυɳҽҽƚ亗")
+                    prog = await m.reply_text(f"**♻️..Downloading Video..♻️**\n\n📄 **Title:** `{name}`\n🔥 **Quality:** {raw_text2}\n\n⚡ **BOT Oɯɳҽɾ➵ᯓ𐌑ⲅ.𝙱𝚎𝚛𝚕𝚒𝚗↭ ♚")
                
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
